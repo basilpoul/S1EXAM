@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+</head>
+<body>
+  <form id="myForm">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+    <span id="emailError" style="color: red;"></span>
+    <br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <span id="passwordError" style="color: red;"></span>
+    <br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required>
+    <span id="phoneError" style="color: red;"></span>
+    <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent form submission
+
+      // Get form values
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const phone = document.getElementById("phone").value;
+
+      // Regex patterns
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // At least 8 characters, one letter, and one number
+      const phoneRegex = /^[0-9]{10}$/; // Exactly 10 digits
+
+      let isValid = true;
+
+      // Validate email
+      if (!emailRegex.test(email)) {
+        document.getElementById("emailError").textContent = "Invalid email format.";
+        isValid = false;
+      } else {
+        document.getElementById("emailError").textContent = "";
+      }
+
+      // Validate password
+      if (!passwordRegex.test(password)) {
+        document.getElementById("passwordError").textContent =
+          "Password must be at least 8 characters long and include at least one letter and one number.";
+        isValid = false;
+      } else {
+        document.getElementById("passwordError").textContent = "";
+      }
+
+      // Validate phone
+      if (!phoneRegex.test(phone)) {
+        document.getElementById("phoneError").textContent = "Phone number must be 10 digits.";
+        isValid = false;
+      } else {
+        document.getElementById("phoneError").textContent = "";
+      }
+
+      // Submit the form if all fields are valid
+      if (isValid) {
+        alert("Form submitted successfully!");
+      }
+    });
+  </script>
+</body>
+</html>
