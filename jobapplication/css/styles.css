@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.heading{
+    font-size: larger;
+    color:gray;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.h1-container{
+    align-content: right;
+}
+.app-body{
+    display: flex;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:black;   
+}
+td{
+    padding: 2px;
+}
+.form-text-box{
+    border-radius: 15px;
+    border-color: grey;
+    padding: 5px;
+}
+.form-text-area{
+    border-radius: 15px;
+    border-color: rgb(106, 105, 105);
+    border-width: 3px;
+}
+.radio{
+    margin-top: 1px;
+    margin-right: 10px;
+    
+}
+.submit{
+    margin-top: 10px;
+    padding: 5px 15px 5px 15px;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+.age{
+    background-color: ;
+}
+table{
+    border-spacing: 0.5em;
+}

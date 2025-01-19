@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(229, 232, 235);
+}
+.main{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.row{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ display: flex;
+ flex-direction: row;
+ justify-content: left;
+   
+}
+.imagerow{
+    margin-bottom: 5%;
+    position: relative;
+    top:10px;
+}
+.col{
+    padding: 5%;
+    background-color: #cdceea;
+}
+.image1{
+    position: absolute;
+    width: 100px; 
+    height: 100px;
+}
+.image2{
+    animation: testAnimation1 6s linear infinite;
+    position: absolute;
+    width: 100px; 
+    height: 100px;
+}
+
+.col{
+    padding: 10%;
+    margin-top: 5%;
+}
+
+
+@keyframes testAnimation1{
+    0%{
+      opacity: 0%;
+    }
+
+    50%{
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 0%;
+    }
+}

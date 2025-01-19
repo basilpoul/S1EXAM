@@ -1,0 +1,58 @@
+.basic{
+    text-align: center;
+    margin: 5%;
+}
+table{
+    display: inline;
+    border-spacing: 10px;
+    border-radius: 6px;
+    margin: 5%;
+    padding: 22%;
+    padding-top: 8%;
+    padding-bottom: 40%;
+    border: 1px double black;
+}
+.edutable{
+    padding:15%;
+    padding-top: 5%;
+}
+.link{
+    color: rgb(111, 106, 106);
+    text-align: right;
+    margin-right: 25%;
+    
+}
+.link1{
+    color: rgb(111, 106, 106);
+    text-align: right;
+    margin-right: 25%;
+    margin-top: 22.8%;
+}
+a{
+    color: rgb(94, 95, 95);
+}
+th{
+    padding: 4px;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(212, 212, 203);
+}
+ul,h3{
+    margin-left: 5%;
+}
+h1{
+    margin-left: 2%;
+}
+.declaration{
+    font-style: italic;
+    margin-left: 4%;
+    margin-top: 5%;
+}
+.pic{
+    height: 150px;
+    width: 150px;
+}
+.photodiv{
+    margin-right: 30%;
+}

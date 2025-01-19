@@ -1,0 +1,14 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: larger;
+    background-color: aliceblue;
+}
+ul{
+    list-style-type: circle;
+}
+h1{
+    font-style: italic;
+}
+.desc{
+    color:rgb(104, 102, 102);
+}

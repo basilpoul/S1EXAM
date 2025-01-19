@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Body Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+    /* Input and Button Styling */
+    input[type="text"] {
+      padding: 8px 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    /* Calendar Table Styling */
+    table {
+      margin: 10px auto;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 300px;
+    }
+    td, th {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+    }
+    /* Month Div Styling */
+    .month-container {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .month-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    /* Ensuring the calendar is evenly spaced */
+    .calendar-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      justify-items: center;
+    }
+  </style>
+  <script>
+    function createCalendar() {
+      const year = Number(document.getElementById("year").value);
+
+      if (isNaN(year) || year <= 0) {
+        alert("Please enter a valid year.");
+        return;
+      }
+
+      const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      for (let mon = 0; mon < 12; ++mon) {
+        let d = new Date(year, mon);
+        let table = `<div class="month-title">${months[mon]}</div>`;
+        table += `
+          <table>
+            <tr>
+              <th>SUN</th>
+              <th>MON</th>
+              <th>TUE</th>
+              <th>WED</th>
+              <th>THU</th>
+              <th>FRI</th>
+              <th>SAT</th>
+            </tr><tr>`;
+
+        // Empty cells before the first day of the month
+        for (let i = 0; i < d.getDay(); i++) {
+          table += "<td></td>";
+        }
+
+        // Fill in the days of the month
+        while (d.getMonth() === mon) {
+          table += `<td>${d.getDate()}</td>`;
+          if (d.getDay() === 6) {
+            table += "</tr><tr>";
+          }
+          d.setDate(d.getDate() + 1);
+        }
+
+        // Add empty cells after the last day of the month
+        if (d.getDay() !== 0) {
+          for (let i = d.getDay(); i <= 6; i++) {
+            table += "<td></td>";
+          }
+        }
+
+        table += "</tr></table>";
+        document.getElementById(mon).innerHTML = table;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Calendar</h1>
+  <div>
+    Enter a year: <input type="text" id="year">
+    <button onClick="createCalendar();">OK</button>
+  </div>
+  <div class="calendar-container">
+    <div id="0" class="month-container"></div>
+    <div id="1" class="month-container"></div>
+    <div id="2" class="month-container"></div>
+    <div id="3" class="month-container"></div>
+    <div id="4" class="month-container"></div>
+    <div id="5" class="month-container"></div>
+    <div id="6" class="month-container"></div>
+    <div id="7" class="month-container"></div>
+    <div id="8" class="month-container"></div>
+    <div id="9" class="month-container"></div>
+    <div id="10" class="month-container"></div>
+    <div id="11" class="month-container"></div>
+  </div>
+</body>
+</html>

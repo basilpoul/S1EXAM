@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <title>Job Application form</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="border">
+        <div class="h1-container">
+          <h1 class="heading" align="center">Application Form</h1>
+        </div>
+        <div class="app-body">
+          <table border="2">
+            <tr>
+              <td>Name</td>
+              <td><input type="text" class="form-text-box" /></td>
+            </tr>
+            <tr>
+              <td>Age</td>
+              <td>
+                <select name="Age" class="age">
+                  <option selected disabled>Select</option>
+                  <option value="18-25">18-25</option>
+                  <option value="26-40">26-40</option>
+                  <option value="40+">40+</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td><input type="password" class="form-text-box" /></td>
+            </tr>
+            <tr>
+              <td>Re enter Password</td>
+              <td><input type="password" class="form-text-box" /></td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td>
+                <textarea class="form-text-area" rows="5" cols="20"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="3">Select your security question</td>
+              <td>
+                <input
+                  type="radio"
+                  class="radio"
+                  name="question"
+                  value="pet-name"
+                />What is your pet name
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <input
+                  type="radio"
+                  class="radio"
+                  name="question"
+                  value="friend"
+                />Who is your best friend
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td>
+                <input
+                  type="radio"
+                  class="radio"
+                  name="question"
+                  value="color"
+                />What is your favorite color
+              </td>
+            </tr>
+            <tr>
+                <td>
+                    Answer to security question
+                </td>
+                <td>
+                    <input type="text" class="form-text-box"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    E-mail
+                </td>
+                <td>
+                    <input type="email" class="form-text-box"/>
+                </td>
+            </tr>
+            
+            <tr>
+              <td>Languages known</td>
+
+              <td>
+                <input type="checkbox" name="lang" value="malayalam" />Malayalam
+                <input type="checkbox" name="lang" value="english" />English
+                <input type="checkbox" name="lang" value="hindi" />Hindi
+              </td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>
+                    <table border="2">
+                        <tr><td>Home</td><td>Office</td></tr>
+                        <tr><td><input type="text" class="form-text-box"></td><td><input type="text" class="form-text-box"></td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Upload CV</td>
+                <td>
+                    <input type="file" class="form-text-box"/>
+                </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <button class="submit">Submit</button>
+                <input type="reset" class="submit"/>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

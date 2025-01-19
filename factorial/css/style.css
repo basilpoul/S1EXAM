@@ -1,0 +1,25 @@
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.num{
+padding-top: 0.5%;
+padding-bottom: 0.5%;
+width: 20%;
+border-color: black;
+border-radius: 6px;
+}
+.submit{
+border-radius: 4px;
+background-color: black;
+color: white;
+margin-top: 1%;
+padding: 0.5%;
+}
+.res{
+    margin-top: 1%;
+    font-family:'Times New Roman', Times, serif;
+}
